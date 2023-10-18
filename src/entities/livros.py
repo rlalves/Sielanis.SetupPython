@@ -3,8 +3,8 @@ from src.config import Base
 
 class Livro(Base):
     __tablename__ = 'livros'
-    id = Column(Integer)
+    id = Column(Integer, primary_key=True)
     nome = Column(String) 
 
     def __repr__(self):
-        return f'<Livro(id={self.id}, nome={self.nome})>'
+        return f'Livro [nome={self.nome}]'

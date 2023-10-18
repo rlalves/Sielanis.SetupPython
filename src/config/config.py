@@ -3,6 +3,7 @@ from sqlalchemy.orm import sessionmaker
 
 class DbConnection:
     def __init__(self):
+        #self.__connection_string = 'mysql+pymysql://root:root@127.0.0.1:3306/Sielanis'
         self.__connection_string = 'mysql+pymysql://root:root@mysqldb/Sielanis'
         self.session = None
 
@@ -14,6 +15,3 @@ class DbConnection:
     
     def __exit__(self, exc_type, exc_val, exc_tb):
         self.session.close()
-        return False
-
-        
